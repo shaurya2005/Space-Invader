@@ -100,9 +100,9 @@ while running:
         # Control Movement
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                player_change = -9
+                player_change = -7
             if event.key == pygame.K_RIGHT:
-                player_change = 9
+                player_change = 7
             if event.key == pygame.K_SPACE:
                 if bullet_state == "ready":
                     bulletX = playerX
@@ -139,10 +139,10 @@ while running:
         enemyX[i] += enemyX_change[i]
 
         if enemyX[i] <= 0:
-            enemyX_change[i] = 9
+            enemyX_change[i] = 6
             enemyY[i] += enemyY_change[i]
         if enemyX[i] >= 735:
-            enemyX_change[i] = -9
+            enemyX_change[i] = -6
             enemyY[i] += enemyY_change[i]
         collision=detect_colission(enemyX[i],enemyY[i],bulletX,bulletY)
         if collision:
